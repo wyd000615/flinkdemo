@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+        <!-- <relativePath/>  lookup parent from repository -->
+    </parent>
+    <groupId>com.wyd</groupId>
+    <artifactId>flink-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>flink-demo</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>1.11.1</version>
+        </dependency>
+
+        <!--
+        1.compile   : 默认的scope,运行期有效，需要打入包中。
+        2.provided  : 编译器有效，运行期不需要提供，不会打入包中。
+        3.runtime   : 编译不需要，在运行期有效，需要导入包中。（接口与实现分离）
+        4.test      : 测试需要，不会打入包中
+        5.system    : 非本地仓库引入、存在系统的某个路径下的jar。（一般不使用）
+        -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_2.12</artifactId>
+            <version>1.11.1</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients_2.12</artifactId>
+            <version>1.11.1</version>
+        </dependency>
+
+
+
+
+
+
+    </dependencies>
+</project>
